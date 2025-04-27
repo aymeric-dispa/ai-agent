@@ -15,10 +15,6 @@ import { processToolCalls } from "./utils";
 import { tools, executions } from "./tools";
 import { env } from "cloudflare:workers";
 
-type Env = {
-  AI: Ai;
-};
-
 const workersai = createWorkersAI({ binding: env.AI });
 const model = workersai("@cf/deepseek-ai/deepseek-r1-distill-qwen-32b");
 

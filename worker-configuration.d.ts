@@ -3,6 +3,7 @@
 declare namespace Cloudflare {
 	interface Env {
 		OPENAI_API_KEY: string;
+    AI: Ai;
 		Chat: DurableObjectNamespace<import("./src/server").Chat>;
 	}
 }
