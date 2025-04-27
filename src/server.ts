@@ -14,7 +14,6 @@ import {
 import { processToolCalls } from "./utils";
 import { tools, executions } from "./tools";
 import { env } from "cloudflare:workers";
-import { createWorkersAI } from "workers-ai-provider";
 
 type Env = {
   AI: Ai;
