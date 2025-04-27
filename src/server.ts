@@ -1,7 +1,7 @@
 import { routeAgentRequest, type Schedule } from "agents";
 
 import { unstable_getSchedulePrompt } from "agents/schedule";
-import { createWorkersAI } from 'workers-ai-provider';
+import { createWorkersAI } from "workers-ai-provider";
 
 import { AIChatAgent } from "agents/ai-chat-agent";
 import {
@@ -14,15 +14,14 @@ import {
 import { processToolCalls } from "./utils";
 import { tools, executions } from "./tools";
 import { env } from "cloudflare:workers";
-import { createWorkersAI } from 'workers-ai-provider';
-
+import { createWorkersAI } from "workers-ai-provider";
 
 type Env = {
   AI: Ai;
 };
 
 const workersai = createWorkersAI({ binding: env.AI });
-const model = workersai("@cf/deepseek-ai/deepseek-r1-distill-qwen-32b")
+const model = workersai("@cf/deepseek-ai/deepseek-r1-distill-qwen-32b");
 
 // Cloudflare AI Gateway
 // const openai = createOpenAI({
